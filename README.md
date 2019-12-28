@@ -70,10 +70,10 @@ Model saved
 The following images are tested with the model.
 
 <p align="center">
-    <img src="./Test_images/20.png" alt="Image" />
-    <img src="./Test_images/aheadonly.png" alt="Image" />
-    <img src="./Test_images/bumpy.png" alt="Image" />
-    <img src="./Test_images/roadwork.png" alt="Image" />
-    <img src="./Test_images/signals.png" alt="Image" />
+    <img src="./Test_images/20.png" alt="Image" width="50" height="50" />
+    <img src="./Test_images/aheadonly.png" alt="Image" width="50" height="50" />
+    <img src="./Test_images/bumpy.png" alt="Image" width="50" height="50" />
+    <img src="./Test_images/roadwork.png" alt="Image" width="50" height="50" />
+    <img src="./Test_images/signals.png" alt="Image" width="50" height="50" />
     
 </p>
