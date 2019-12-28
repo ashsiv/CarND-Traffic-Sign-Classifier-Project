@@ -26,8 +26,6 @@ Here is the statistics of the dataset. A 80-20 train-validation split is taken.
 * Number of classes             = 43
 
 Plotting the distribution, we can observe that both in training and testing set, the % of images per class is roughly the same.
-![Distribution](./Distribution.PNG)
-
 <p align="center">
-    <img src="./Distribution.PNG" alt="Image" width="800" height="600" />
+    <img src="./Distribution.PNG" alt="Image" />
 </p>
