@@ -47,6 +47,9 @@ As part of preprocessing, the images are subjected to the following operations
 
 #### Lenet Architecture
 
+The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use of Pooling and Flattening operations at the end of the Layer 2 convolutional layer.
+A batch size of 128 and total number of epochs = 10 is chosen.
+
 * Layer 1: Convolutional. Input = 32x32x1. Output = 28x28x6.
 * Layer 2: Convolutional. Output = 10x10x16.
     * Pooling. Input = 10x10x16. Output = 5x5x16.
@@ -54,3 +57,23 @@ As part of preprocessing, the images are subjected to the following operations
 * Layer 3: Fully Connected. Input = 400. Output = 120.
 * Layer 4: Fully Connected. Input = 120. Output =  84.
 * Layer 5: Fully Connected. Input =  84. Output =  43.
+
+
+Running the preprocessed dataset with the above model yielded about 97.6% accuracy @ the 10th Epoch.
+```python
+EPOCH 10 ...
+Validation Accuracy = 0.976
+Model saved
+```
+#### Testing the training set with new images.
+
+The following images are tested with the model.
+
+<p align="center">
+    <img src="./Test_images/20.PNG" alt="Image" />
+    <img src="./Test_images/aheadonly.PNG" alt="Image" />
+    <img src="./Test_images/bumpy.PNG" alt="Image" />
+    <img src="./Test_images/roadwork.PNG" alt="Image" />
+    <img src="./Test_images/signals.PNG" alt="Image" />
+    
+</p>
