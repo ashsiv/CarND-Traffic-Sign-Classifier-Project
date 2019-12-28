@@ -31,4 +31,4 @@ Plotting the distribution, we can observe that both in training and testing set,
  
 </p>
 
- ![Distribution](./Distribution.PNG)
+ ![Distribution](./Distribution.PNG){ width="800" height="600" style="display: block; margin: 0 auto" }
