@@ -25,7 +25,32 @@ Here is the statistics of the dataset. A 80-20 train-validation split is taken.
 * Input Image data shape        = (32, 32, 3)
 * Number of classes             = 43
 
-Plotting the distribution, we can observe that both in training and testing set, the % of images per class is roughly the same.
+Plotting the distribution, we can observe that both in training and validation set, the % of images per class is roughly the same.
 <p align="center">
     <img src="./Distribution.PNG" alt="Image" />
 </p>
+
+### Lenet-5 implementation 
+#### Data augmentation
+As a first step, images from the initial training, validation & test sets are resized using the coordinate markers using the function below.
+```python
+def resize(features,labels,coord,size):
+```
+Then a section of images (3%) per class are shifted in 4 different directions (up, down, left, right) by 3 pixels to augment the training set. Then a 80-20% (train-validation) split is obtained
+
+#### Preprocessing
+
+As part of preprocessing, the images are subjected to the following operations
+
+* RGB to Gray scale conversion (In this project, I have disabled this step as it was found to increase accuracy a bit)
+* Normalization
+
+#### Lenet Architecture
+
+* Layer 1: Convolutional. Input = 32x32x1. Output = 28x28x6.
+* Layer 2: Convolutional. Output = 10x10x16.
+** Pooling. Input = 10x10x16. Output = 5x5x16.
+** Flatten. Input = 5x5x16. Output = 400.
+* Layer 3: Fully Connected. Input = 400. Output = 120.
+* Layer 4: Fully Connected. Input = 120. Output =  84.
+* Layer 5: Fully Connected. Input =  84. Output =  43.
