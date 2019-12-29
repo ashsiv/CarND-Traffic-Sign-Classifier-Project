@@ -119,25 +119,25 @@ In the following tables, we can observe test accuracy for the correctly identifi
 <p align="center">
     Speed Limit 20 Km/h
     <p align="center">
-    <img src="./Test_images/20_accuracy.png" alt="Image" width="50" height="50" /></p>
+    <img src="./Test_images/20_accuracy.PNG" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
     Ahead Only
     <p align="center">
-    <img src="./Test_images/aheadonly_accuracy.png" alt="Image" width="50" height="50" /></p>
+    <img src="./Test_images/aheadonly_accuracy.PNG" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
     Bumpy road
     <p align="center">
-    <img src="./Test_images/bumpy_accuracy.png" alt="Image" width="50" height="50" /></p>
+    <img src="./Test_images/bumpy_accuracy.PNG" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
     Roadwork 
     <p align="center">
-    <img src="./Test_images/roadwork_accuracy.png" alt="Image" width="50" height="50" /></p>
+    <img src="./Test_images/roadwork_accuracy.PNG" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
     Traffic signals 
     <p align="center">
-    <img src="./Test_images/signals_accuracy.png" alt="Image" width="50" height="50" /></p>
+    <img src="./Test_images/signals_accuracy.PNG" alt="Image" width="50" height="50" /></p>
 </p>   
