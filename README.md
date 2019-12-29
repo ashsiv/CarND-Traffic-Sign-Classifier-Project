@@ -28,7 +28,7 @@ Plotting the distribution, we can observe that both in training and validation s
 
 ### Lenet architecture implementation 
 #### Data augmentation
-As a first step, images from the initial training, validation sets are resized using the given coordinate markers using the function below. NOTE: I have kept this step optional in this project.
+As a first step, images from the initial training & validation sets are resized using the given coordinate markers using the function below. NOTE: I have kept this step optional in this project.
 ```python
 def resize(features,labels,coord,size):
 ```
@@ -76,7 +76,7 @@ INFO:tensorflow:Restoring parameters from ./lenet
 Test Accuracy = 0.886
 ```
 
-#### Testing the training set with new images.
+#### Testing the model with new images.
 
 The following images are tested with the model.
 
