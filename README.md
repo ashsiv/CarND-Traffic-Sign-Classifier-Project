@@ -36,7 +36,7 @@ As a first step, images from the initial training, validation sets are resized u
 ```python
 def resize(features,labels,coord,size):
 ```
-Then a section of images (3%) per class are shifted in 4 different directions (up, down, left, right) by 3 pixels. NOTE: "Reflect" mode is used as padding during shift operation.
+Then a section of images (3%) per class are shifted in 4 different directions (up, down, left, right) by 3 pixels. NOTE: "Reflect" mode is used as padding during shift operation.NOTE: I have kept this step optional in this project.
 ```python
 def shift_augment(x,shiftval,y):
 ```
