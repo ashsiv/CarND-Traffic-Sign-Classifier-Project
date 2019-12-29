@@ -50,7 +50,9 @@ As part of preprocessing, the images are subjected to the following operations
 * Normalization
 
 #### Lenet Architecture
-
+<p align="center">
+    <img src="./architecture.PNG" alt="Image" />
+</p>
 
 The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use of Pooling and Flattening operations at the end of the Layer 2 convolutional layer.
 A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are chosen.
