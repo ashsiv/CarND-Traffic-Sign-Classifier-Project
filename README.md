@@ -67,12 +67,19 @@ A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are 
 * Layer 5: Fully Connected. Input =  84. Output =  43.
 
 
-Running the preprocessed dataset with the above model yielded about 97.6% accuracy @ the 10th Epoch.
+Running the preprocessed dataset with the above model yielded about 97.7% accuracy @ the 10th Epoch.
 ```python
 EPOCH 10 ...
-Validation Accuracy = 0.976
+Validation Accuracy = 0.977
 Model saved
 ```
+
+Running the above model on the test dataset yielded about 88.6% accuracy.
+```python
+INFO:tensorflow:Restoring parameters from ./lenet
+Test Accuracy = 0.886
+```
+
 #### Testing the training set with new images.
 
 The following images are tested with the model.
