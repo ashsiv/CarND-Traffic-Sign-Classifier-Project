@@ -17,7 +17,7 @@ Project Goals
 
 ### Dataset summary and visualization
 
-Here is the statistics of the dataset. A 80-20 train-validation split is taken.
+Here is the statistics of the dataset. A 80-20% train-validation split is taken.
 
 * Number of training examples   = 31367(80.0%)
 * Number of validation examples = 7842(20.0%)
@@ -30,28 +30,36 @@ Plotting the distribution, we can observe that both in training and validation s
     <img src="./Distribution.PNG" alt="Image" />
 </p>
 
-### Lenet-5 implementation 
+### Lenet architecture implementation 
 #### Data augmentation
-As a first step, images from the initial training, validation & test sets are resized using the coordinate markers using the function below.
+As a first step, images from the initial training, validation sets are resized using the given coordinate markers using the function below. NOTE: I have kept this step optional in this project.
 ```python
 def resize(features,labels,coord,size):
 ```
-Then a section of images (3%) per class are shifted in 4 different directions (up, down, left, right) by 3 pixels to augment the training set. Then a 80-20% (train-validation) split is obtained
+Then a section of images (3%) per class are shifted in 4 different directions (up, down, left, right) by 3 pixels. NOTE: "Reflect" mode is used as padding during shift operation.NOTE: I have kept this step optional in this project.
+```python
+def shift_augment(x,shiftval,y):
+```
+Finally a 80-20% (train-validation) split is obtained.
 
 #### Preprocessing
 
 As part of preprocessing, the images are subjected to the following operations
 
-* RGB to Gray scale conversion (In this project, I have disabled this step as it was found to increase accuracy a bit)
+* RGB to Gray scale conversion (In this project, I have kept this step optional)
 * Normalization
 
 #### Lenet Architecture
+<p align="center">
+    <img src="./architecture.PNG" alt="Image" />
+</p>
 
-The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use of Pooling and Flattening operations at the end of the Layer 2 convolutional layer.
+The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use flattening operation at the end of the 2nd convolutional layer.
 A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are chosen.
 
 * Layer 1: Convolutional. Input = 32x32x1. Output = 28x28x6.
-* Layer 2: Convolutional. Output = 10x10x16.
+    * Pooling. Input = 28x28x6. Output = 14x14x6.
+* Layer 2: Convolutional. Input = 14x14x6.Output = 10x10x16.
     * Pooling. Input = 10x10x16. Output = 5x5x16.
     * Flatten. Input = 5x5x16. Output = 400.
 * Layer 3: Fully Connected. Input = 400. Output = 120.
@@ -59,12 +67,19 @@ A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are 
 * Layer 5: Fully Connected. Input =  84. Output =  43.
 
 
-Running the preprocessed dataset with the above model yielded about 97.6% accuracy @ the 10th Epoch.
+Running the preprocessed dataset with the above model yielded about 97.7% accuracy @ the 10th Epoch.
 ```python
 EPOCH 10 ...
-Validation Accuracy = 0.976
+Validation Accuracy = 0.977
 Model saved
 ```
+
+Running the above model on the test dataset yielded about 88.6% accuracy.
+```python
+INFO:tensorflow:Restoring parameters from ./lenet
+Test Accuracy = 0.886
+```
+
 #### Testing the training set with new images.
 
 The following images are tested with the model.
@@ -96,12 +111,48 @@ The following images are tested with the model.
 </p>   
 
 #### Test accuracy
+```python
+Overall Test accuracy = 100%
+```
+In the following tables, we can observe test accuracy for the correctly identified class along with the other top 4 predictions.
+<p><b>Speed Limit (20 Km/h)</b></p>
+<p></p>
+    
+    
+| Speed Limit (20 Km/h) | Speed limit (30km/h) | End of all speed and passing limits| End of speed limit (80km/h)| Right-of-way at the next intersection |
+|--|--|--|--|--|
+|90.40%|4.26%|2.61%|2.12%|0.304%|
 
-|                     | Speed Limit (20 Km/h) | Ahead Only | Bumpy road | Roadwork | Traffic signals |
-|----|----|----|----|----|----|
-|Speed Limit (20 Km/h)||||||
-|Ahead Only           ||||||
-| Bumpy road          ||||||
-| Roadwork            ||||||
-| Traffic signals     ||||||
 
+<p><b>Road work</b></p>
+<p></p>
+    
+    
+| Road work | Wild animals crossing | Speed limit (80km/h)| Speed limit (30km/h)| Speed limit (50km/h) |
+|--|--|--|--|--|
+|99.97%|0.016%|0.004%|0.004%|0.003%|
+
+
+<p><b>Traffic signals</b></p>
+<p></p>
+    
+    
+| Traffic signals | General caution | Pedestrians| Road narrows on the right| Right-of-way at the next intersection |
+|--|--|--|--|--|
+|93.38%|6.602%|0.014%|0.000%|0.000%|
+
+<p><b>Ahead only</b></p>
+<p></p>
+    
+    
+| Ahead only | Go straight or right | Turn right ahead| Turn left ahead| Keep right |
+|--|--|--|--|--|
+|99.83%|0.145%|0.024%|0.000%|0.000%|
+
+<p><b>Bumpy road</b></b></p>
+<p></p>
+    
+    
+| Bumpy road   | Bicycles crossing |Traffic signals|Road work| Road narrows on the right |
+|--|--|--|--|--|
+|99.64%|0.306%|0.037%|0.009%|0.004%|
