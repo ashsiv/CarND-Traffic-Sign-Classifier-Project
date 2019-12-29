@@ -95,5 +95,12 @@ The following images are tested with the model.
     <img src="./Test_images/signals.png" alt="Image" width="50" height="50" /></p>
 </p>   
 
+#### Test accuracy
 
+|                     | Speed Limit (20 Km/h) | Ahead Only | Bumpy road | Roadwork | Traffic signals |
+|Speed Limit (20 Km/h)||||||
+|Ahead Only           ||||||
+| Bumpy road          ||||||
+| Roadwork            ||||||
+| Traffic signals     ||||||
 
