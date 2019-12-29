@@ -1,4 +1,4 @@
-## Project: Traffic Sign Classification
+## Traffic Sign Classification
 
 Overview
 ---
@@ -129,7 +129,7 @@ In the following tables, we can observe test accuracy for the correctly identifi
 <p align="center">
     Bumpy road
     <p align="center">
-    <img src="./Test_images/bumpy_accuracy.PNG" alt="Image"  /></p>
+    <img src="./Test_images/bumpyroad_accuracy.PNG" alt="Image"  /></p>
 </p>
 <p align="center">
     Roadwork 
