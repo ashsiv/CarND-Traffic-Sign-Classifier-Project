@@ -108,7 +108,7 @@ The following images are tested with the model.
 Overall Test accuracy = 100%
 
 In the following tables, we can observe test accuracy for the correctly identified class along with the other top 4 predictions.
-<p>Speed Limit (20 Km/h)</p>
+<p><b>Speed Limit (20 Km/h)</b></p>
 <p></p>
     
     
@@ -117,7 +117,7 @@ In the following tables, we can observe test accuracy for the correctly identifi
 |90.40%|4.26%|2.61%|2.12%|0.304%|
 
 
-<p>Road work</p>
+<p><b>Road work</b></p>
 <p></p>
     
     
@@ -126,7 +126,7 @@ In the following tables, we can observe test accuracy for the correctly identifi
 |99.97%|0.016%|0.004%|0.004%|0.003%|
 
 
-<p>Traffic signals</p>
+<p><b>Traffic signals</b></p>
 <p></p>
     
     
@@ -134,7 +134,7 @@ In the following tables, we can observe test accuracy for the correctly identifi
 |--|--|--|--|--|
 |93.38%|6.602%|0.014%|0.000%|0.000%|
 
-<p>Ahead only</p>
+<p><b>Ahead only</b></p>
 <p></p>
     
     
@@ -142,7 +142,7 @@ In the following tables, we can observe test accuracy for the correctly identifi
 |--|--|--|--|--|
 |99.83%|0.145%|0.024%|0.000%|0.000%|
 
-<p>Bumpy road</p>
+<p><b>Bumpy road</b></b></p>
 <p></p>
     
     
