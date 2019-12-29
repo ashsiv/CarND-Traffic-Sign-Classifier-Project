@@ -104,6 +104,10 @@ The following images are tested with the model.
 </p>   
 
 #### Test accuracy
+
+Overall Test accuracy = 100%
+
+In the following tables, we can observe test accuracy for the correctly identified class along with the other top 4 predictions.
 <p>Speed Limit (20 Km/h)</p>
 <p></p>
     
@@ -113,3 +117,35 @@ The following images are tested with the model.
 |90.40%|4.26%|2.61%|2.12%|0.304%|
 
 
+<p>Road work</p>
+<p></p>
+    
+    
+| Road work | Wild animals crossing | Speed limit (80km/h)| Speed limit (30km/h)| Speed limit (50km/h) |
+|--|--|--|--|--|
+|99.97%|0.016%|0.004%|0.004%|0.003%|
+
+
+<p>Traffic signals</p>
+<p></p>
+    
+    
+| Traffic signals | General caution | Pedestrians| Road narrows on the right| Right-of-way at the next intersection |
+|--|--|--|--|--|
+|93.38%|6.602%|0.014%|0.000%|0.000%|
+
+<p>Ahead only</p>
+<p></p>
+    
+    
+| Ahead only | Go straight or right | Turn right ahead| Turn left ahead| Keep right |
+|--|--|--|--|--|
+|99.83%|0.145%|0.024%|0.000%|0.000%|
+
+<p>Bumpy road</p>
+<p></p>
+    
+    
+| Bumpy road   | Bicycles crossing |Traffic signals|Road work| Road narrows on the right |
+|--|--|--|--|--|
+|99.64%|0.306%|0.037%|0.009%|0.004%|
