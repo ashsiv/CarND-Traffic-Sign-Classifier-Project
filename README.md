@@ -70,23 +70,28 @@ Model saved
 The following images are tested with the model.
 
 <p align="center">
-   * Speed Limit 20 Km/h
+    Speed Limit 20 Km/h
+    <p></p>
     <img src="./Test_images/20.png" alt="Image" width="50" height="50" />
 </p>
 <p align="center">
-   *  Ahead Only
+    Ahead Only
+    <p></p>
     <img src="./Test_images/aheadonly.png" alt="Image" width="50" height="50" />
 </p>
 <p align="center">
-   *  Bumpy road
+    Bumpy road
+    <p></p>
     <img src="./Test_images/bumpy.png" alt="Image" width="50" height="50" />
 </p>
 <p align="center">
-   *  Roadwork 
+    Roadwork 
+    <p></p>
     <img src="./Test_images/roadwork.png" alt="Image" width="50" height="50" />
 </p>
 <p align="center">
-   * Traffic signals 
+    Traffic signals 
+    <p></p>
     <img src="./Test_images/signals.png" alt="Image" width="50" height="50" />
 </p>   
 
