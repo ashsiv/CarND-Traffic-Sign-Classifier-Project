@@ -104,7 +104,7 @@ The following images are tested with the model.
 </p>   
 
 #### Test accuracy
-* Speed Limit 20 Km/h
+Speed Limit 20 Km/h
 | Speed Limit (20 Km/h) | Speed limit (30km/h) | End of all speed and passing limits| End of speed limit (80km/h)| Right-of-way at the next intersection |
 |--|--|--|--|--|
 |90.40|4.26|2.61|2.12|0.304|
