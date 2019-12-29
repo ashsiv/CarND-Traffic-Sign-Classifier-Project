@@ -2,16 +2,12 @@
 
 Overview
 ---
-In this project, I have used deep neural networks and convolutional neural networks to classify traffic signs. 
-
-you will use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. 
-
-To run this project, use the "Traffic_Sign_Classifier.ipynb" notebook.
+In this project, I have used a modified LeNet convolutional neural network to classify traffic signs from a [German dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). 
 
 Project Goals
 ---
 * Dataset summary and visualization.
-* Design, train and test a Lenet model architecture.
+* Design, train and test a LeNet Architecture.
 * Use the model to make predictions on new images & analyze the softmax probabilities of the new images.
 
 
@@ -32,7 +28,7 @@ Plotting the distribution, we can observe that both in training and validation s
 
 ### Lenet architecture implementation 
 #### Data augmentation
-As a first step, images from the initial training, validation sets are resized using the given coordinate markers using the function below. NOTE: I have kept this step optional in this project.
+As a first step, images from the initial training & validation sets are resized using the given coordinate markers using the function below. NOTE: I have kept this step optional in this project.
 ```python
 def resize(features,labels,coord,size):
 ```
@@ -44,7 +40,7 @@ Finally a 80-20% (train-validation) split is obtained.
 
 #### Preprocessing
 
-As part of preprocessing, the images are subjected to the following operations
+As part of preprocessing, the images are subjected to the following operations before training the network:
 
 * RGB to Gray scale conversion (In this project, I have kept this step optional)
 * Normalization
@@ -55,7 +51,7 @@ As part of preprocessing, the images are subjected to the following operations
 </p>
 
 The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use flattening operation at the end of the 2nd convolutional layer.
-A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are chosen.
+A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are chosen for training the network.
 
 * Layer 1: Convolutional. Input = 32x32x1. Output = 28x28x6.
     * Pooling. Input = 28x28x6. Output = 14x14x6.
@@ -67,7 +63,7 @@ A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are 
 * Layer 5: Fully Connected. Input =  84. Output =  43.
 
 
-Running the preprocessed dataset with the above model yielded about 97.7% accuracy @ the 10th Epoch.
+Running the validation dataset with the above trained model yielded about 97.7% accuracy @ the 10th Epoch.
 ```python
 EPOCH 10 ...
 Validation Accuracy = 0.977
@@ -80,7 +76,7 @@ INFO:tensorflow:Restoring parameters from ./lenet
 Test Accuracy = 0.886
 ```
 
-#### Testing the training set with new images.
+#### Testing the model with new images.
 
 The following images are tested with the model.
 
