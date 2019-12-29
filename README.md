@@ -40,7 +40,7 @@ Finally a 80-20% (train-validation) split is obtained.
 
 #### Preprocessing
 
-As part of preprocessing, the images are subjected to the following operations
+As part of preprocessing, the images are subjected to the following operations before training the network:
 
 * RGB to Gray scale conversion (In this project, I have kept this step optional)
 * Normalization
