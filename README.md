@@ -71,28 +71,28 @@ The following images are tested with the model.
 
 <p align="center">
     Speed Limit 20 Km/h
-    <p align="center"></p>
-    <img src="./Test_images/20.png" alt="Image" width="50" height="50" />
+    <p align="center">
+    <img src="./Test_images/20.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
     Ahead Only
-    <p align="center"></p>
-    <img src="./Test_images/aheadonly.png" alt="Image" width="50" height="50" />
+    <p align="center">
+    <img src="./Test_images/aheadonly.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
     Bumpy road
-    <p align="center"></p>
-    <img src="./Test_images/bumpy.png" alt="Image" width="50" height="50" />
+    <p align="center">
+    <img src="./Test_images/bumpy.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
     Roadwork 
-    <p align="center"></p>
-    <img src="./Test_images/roadwork.png" alt="Image" width="50" height="50" />
+    <p align="center">
+    <img src="./Test_images/roadwork.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
     Traffic signals 
-    <p align="center"></p>
-    <img src="./Test_images/signals.png" alt="Image" width="50" height="50" />
+    <p align="center">
+    <img src="./Test_images/signals.png" alt="Image" width="50" height="50" /></p>
 </p>   
 
 
