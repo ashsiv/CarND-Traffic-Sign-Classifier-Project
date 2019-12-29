@@ -2,7 +2,7 @@
 
 Overview
 ---
-In this project, I have used deep neural networks and convolutional neural networks to classify traffic signs. 
+In this project, I have used a modified LeNet convolutional neural network to classify traffic signs from a [German dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). 
 
 you will use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. 
 
