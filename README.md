@@ -115,44 +115,29 @@ The following images are tested with the model.
 Overall Test accuracy = 100%
 ```
 In the following tables, we can observe test accuracy for the correctly identified class along with the other top 4 predictions.
-<p><b>Speed Limit (20 Km/h)</b></p>
-<p></p>
-    
-    
-| Speed Limit (20 Km/h) | Speed limit (30km/h) | End of all speed and passing limits| End of speed limit (80km/h)| Right-of-way at the next intersection |
-|--|--|--|--|--|
-|90.40%|4.26%|2.61%|2.12%|0.304%|
 
-
-<p><b>Road work</b></p>
-<p></p>
-    
-    
-| Road work | Wild animals crossing | Speed limit (80km/h)| Speed limit (30km/h)| Speed limit (50km/h) |
-|--|--|--|--|--|
-|99.97%|0.016%|0.004%|0.004%|0.003%|
-
-
-<p><b>Traffic signals</b></p>
-<p></p>
-    
-    
-| Traffic signals | General caution | Pedestrians| Road narrows on the right| Right-of-way at the next intersection |
-|--|--|--|--|--|
-|93.38%|6.602%|0.014%|0.000%|0.000%|
-
-<p><b>Ahead only</b></p>
-<p></p>
-    
-    
-| Ahead only | Go straight or right | Turn right ahead| Turn left ahead| Keep right |
-|--|--|--|--|--|
-|99.83%|0.145%|0.024%|0.000%|0.000%|
-
-<p><b>Bumpy road</b></b></p>
-<p></p>
-    
-    
-| Bumpy road   | Bicycles crossing |Traffic signals|Road work| Road narrows on the right |
-|--|--|--|--|--|
-|99.64%|0.306%|0.037%|0.009%|0.004%|
+<p align="center">
+    Speed Limit 20 Km/h
+    <p align="center">
+    <img src="./Test_images/20_accuracy.png" alt="Image" width="50" height="50" /></p>
+</p>
+<p align="center">
+    Ahead Only
+    <p align="center">
+    <img src="./Test_images/aheadonly_accuracy.png" alt="Image" width="50" height="50" /></p>
+</p>
+<p align="center">
+    Bumpy road
+    <p align="center">
+    <img src="./Test_images/bumpy_accuracy.png" alt="Image" width="50" height="50" /></p>
+</p>
+<p align="center">
+    Roadwork 
+    <p align="center">
+    <img src="./Test_images/roadwork_accuracy.png" alt="Image" width="50" height="50" /></p>
+</p>
+<p align="center">
+    Traffic signals 
+    <p align="center">
+    <img src="./Test_images/signals_accuracy.png" alt="Image" width="50" height="50" /></p>
+</p>   
