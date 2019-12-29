@@ -48,7 +48,7 @@ As part of preprocessing, the images are subjected to the following operations
 #### Lenet Architecture
 
 The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use of Pooling and Flattening operations at the end of the Layer 2 convolutional layer.
-A batch size of 128 and total number of epochs = 10 is chosen.
+A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are chosen.
 
 * Layer 1: Convolutional. Input = 32x32x1. Output = 28x28x6.
 * Layer 2: Convolutional. Output = 10x10x16.
@@ -70,10 +70,17 @@ Model saved
 The following images are tested with the model.
 
 <p align="center">
+    Speed Limit 20 Km/h
     <img src="./Test_images/20.png" alt="Image" width="50" height="50" />
+    Ahead Only
     <img src="./Test_images/aheadonly.png" alt="Image" width="50" height="50" />
+    Bumpy roads ahead
     <img src="./Test_images/bumpy.png" alt="Image" width="50" height="50" />
+    Roadwork ahead
     <img src="./Test_images/roadwork.png" alt="Image" width="50" height="50" />
+    Traffic signals ahead
     <img src="./Test_images/signals.png" alt="Image" width="50" height="50" />
     
 </p>
+
+
