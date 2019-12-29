@@ -111,9 +111,9 @@ The following images are tested with the model.
 </p>   
 
 #### Test accuracy
-
+```python
 Overall Test accuracy = 100%
-
+```
 In the following tables, we can observe test accuracy for the correctly identified class along with the other top 4 predictions.
 <p><b>Speed Limit (20 Km/h)</b></p>
 <p></p>
