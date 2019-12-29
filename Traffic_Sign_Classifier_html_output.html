@@ -13206,16 +13206,11 @@ div#notebook {
             <span class="n">newcx</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">newcx</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
         <span class="n">I</span><span class="o">=</span><span class="n">features</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
-        <span class="c1">#print(I.shape)</span>
-        <span class="c1">#print(&quot;new coordinates:&quot;,newcx)</span>
-        <span class="c1">#plt.imshow(I)</span>
-        <span class="c1">#plt.show()</span>
+       
         <span class="n">I</span><span class="o">=</span><span class="n">I</span><span class="p">[</span><span class="n">newcx</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">newcx</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">newcx</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span><span class="n">newcx</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">:]</span>
         <span class="n">resized</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="mi">32</span><span class="p">),</span> <span class="n">interpolation</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_AREA</span><span class="p">)</span>
        
-        <span class="c1">#plt.imshow(resized)</span>
         <span class="n">resized</span><span class="o">=</span><span class="n">resized</span><span class="p">[</span><span class="n">newaxis</span><span class="p">,:,:,:]</span>
-        <span class="c1">#plt.show()</span>
         
         <span class="n">f</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">f</span><span class="p">,</span><span class="n">resized</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">labels</span><span class="p">)</span>   
@@ -13250,16 +13245,14 @@ div#notebook {
 <span class="n">trainX</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">X_trainp</span><span class="p">,</span><span class="n">X_validp</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">trainY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">y_trainp</span><span class="p">,</span><span class="n">y_validp</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hi&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">trainX</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">trainY</span><span class="p">))</span>
 
 <span class="k">if</span><span class="p">(</span><span class="n">Shift</span><span class="p">):</span>
 
     <span class="c1"># Augment training set by shifting images (10% of each class)</span>
     <span class="n">B</span><span class="o">=</span><span class="n">trainY</span>
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">43</span><span class="p">):</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span>
+       
         <span class="n">Class_img_ind</span><span class="o">=</span><span class="p">[</span><span class="n">index</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">c</span><span class="p">]</span>
-        <span class="c1">#print(c,np.int(0.03*len(Class_img_ind)))</span>
         <span class="n">img_ind</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">Class_img_ind</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="mf">0.03</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">Class_img_ind</span><span class="p">)))</span>
         <span class="n">count</span><span class="o">=</span><span class="mi">1</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">img_ind</span><span class="p">:</span>
@@ -13538,7 +13531,7 @@ Number of classes             = 43
 
 <span class="c1"># RGB to Gray scale conversion</span>
 <span class="k">def</span> <span class="nf">rgb2gray</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
-   <span class="c1"># print(type(image),image.shape,type(image[0][0][0]))</span>
+  
     <span class="n">gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_RGB2GRAY</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">gray</span><span class="p">)</span>
 
@@ -13923,9 +13916,8 @@ Test Accuracy = 0.886
     <span class="n">Image</span><span class="o">=</span><span class="n">img</span><span class="p">[</span><span class="n">newaxis</span><span class="p">,:,:,:];</span>
     <span class="n">XX_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">XX_test</span><span class="p">,</span><span class="n">Image</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">XX_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
 <span class="n">yy_test</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">22</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">yy_test</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">yy_test</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -14083,12 +14075,10 @@ Test Accuracy = 0.886
 
         <span class="k">return</span> <span class="n">XX_test</span>
        
-        
-<span class="c1">#print(XX_test.shape)</span>
+
 <span class="n">XX_T</span><span class="o">=</span> <span class="n">preprocess_test</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">XX_test</span><span class="p">,</span><span class="n">convert2gray</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="k">del</span> <span class="n">XX_test</span>
 <span class="n">XX_test</span><span class="o">=</span><span class="n">XX_T</span>
-<span class="c1">#print(XX_test.shape)</span>
 </pre></div>
 
     </div>
@@ -14125,8 +14115,7 @@ Test Accuracy = 0.886
         <span class="n">batch_x</span><span class="p">,</span> <span class="n">batch_y</span> <span class="o">=</span> <span class="n">X_data</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">offset</span><span class="o">+</span><span class="n">BATCH_SIZE</span><span class="p">],</span> <span class="n">y_data</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">offset</span><span class="o">+</span><span class="n">BATCH_SIZE</span><span class="p">]</span>
         <span class="n">A</span><span class="p">,</span><span class="n">accuracy</span><span class="p">,</span><span class="n">B</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">logits</span><span class="p">,</span><span class="n">accuracy_operation</span><span class="p">,</span><span class="n">one_hot_y</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">batch_x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">batch_y</span><span class="p">,</span><span class="n">keep_prob</span><span class="p">:</span><span class="mf">1.0</span><span class="p">})</span>
         <span class="n">A</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
-        <span class="c1">#print( A,B,np.argmax(A) )</span>
-        <span class="c1">#print(accuracy)</span>
+        
         <span class="n">TopKV</span><span class="o">=</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">top_k</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
         <span class="n">scores</span><span class="o">=</span><span class="n">TopKV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span>
         <span class="n">indices</span><span class="o">=</span><span class="n">TopKV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
