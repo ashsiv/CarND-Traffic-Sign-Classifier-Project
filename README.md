@@ -17,7 +17,7 @@ Project Goals
 
 ### Dataset summary and visualization
 
-Here is the statistics of the dataset. A 80-20 train-validation split is taken.
+Here is the statistics of the dataset. A 80-20% train-validation split is taken.
 
 * Number of training examples   = 31367(80.0%)
 * Number of validation examples = 7842(20.0%)
@@ -30,22 +30,27 @@ Plotting the distribution, we can observe that both in training and validation s
     <img src="./Distribution.PNG" alt="Image" />
 </p>
 
-### Lenet-5 implementation 
+### Lenet architecture implementation 
 #### Data augmentation
-As a first step, images from the initial training, validation & test sets are resized using the coordinate markers using the function below.
+As a first step, images from the initial training, validation sets are resized using the given coordinate markers using the function below. NOTE: I have kept this step optional in this project.
 ```python
 def resize(features,labels,coord,size):
 ```
-Then a section of images (3%) per class are shifted in 4 different directions (up, down, left, right) by 3 pixels to augment the training set. Then a 80-20% (train-validation) split is obtained
+Then a section of images (3%) per class are shifted in 4 different directions (up, down, left, right) by 3 pixels. NOTE: "Reflect" mode is used as padding during shift operation.
+```python
+def shift_augment(x,shiftval,y):
+```
+Finally a 80-20% (train-validation) split is obtained.
 
 #### Preprocessing
 
 As part of preprocessing, the images are subjected to the following operations
 
-* RGB to Gray scale conversion (In this project, I have disabled this step as it was found to increase accuracy a bit)
+* RGB to Gray scale conversion (In this project, I have kept this step optional)
 * Normalization
 
 #### Lenet Architecture
+
 
 The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use of Pooling and Flattening operations at the end of the Layer 2 convolutional layer.
 A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are chosen.
