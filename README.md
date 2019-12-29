@@ -54,11 +54,12 @@ As part of preprocessing, the images are subjected to the following operations
     <img src="./architecture.PNG" alt="Image" />
 </p>
 
-The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use of Pooling and Flattening operations at the end of the Layer 2 convolutional layer.
+The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use flattening operation at the end of the 2nd convolutional layer.
 A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are chosen.
 
 * Layer 1: Convolutional. Input = 32x32x1. Output = 28x28x6.
-* Layer 2: Convolutional. Output = 10x10x16.
+    * Pooling. Input = 28x28x6. Output = 14x14x6.
+* Layer 2: Convolutional. Input = 14x14x6.Output = 10x10x16.
     * Pooling. Input = 10x10x16. Output = 5x5x16.
     * Flatten. Input = 5x5x16. Output = 400.
 * Layer 3: Fully Connected. Input = 400. Output = 120.
@@ -103,12 +104,9 @@ The following images are tested with the model.
 </p>   
 
 #### Test accuracy
+* Speed Limit 20 Km/h
+| Speed Limit (20 Km/h) | Speed limit (30km/h) | End of all speed and passing limits| End of speed limit (80km/h)| Right-of-way at the next intersection |
+|--|--|--|--|--|
+|90.40|4.26|2.61|2.12|0.304|
 
-|                     | Speed Limit (20 Km/h) | Ahead Only | Bumpy road | Roadwork | Traffic signals |
-|----|----|----|----|----|----|
-|Speed Limit (20 Km/h)||||||
-|Ahead Only           ||||||
-| Bumpy road          ||||||
-| Roadwork            ||||||
-| Traffic signals     ||||||
 
