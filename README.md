@@ -51,7 +51,7 @@ As part of preprocessing, the images are subjected to the following operations b
 </p>
 
 The architecture consists of 2 convolutional layers and 3 fully connected layers. Note the use flattening operation at the end of the 2nd convolutional layer.
-A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are chosen.
+A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are chosen for training the network.
 
 * Layer 1: Convolutional. Input = 32x32x1. Output = 28x28x6.
     * Pooling. Input = 28x28x6. Output = 14x14x6.
@@ -63,7 +63,7 @@ A batch size of 128, total number of epochs = 10 & a learning rate of 0.001 are 
 * Layer 5: Fully Connected. Input =  84. Output =  43.
 
 
-Running the preprocessed dataset with the above model yielded about 97.7% accuracy @ the 10th Epoch.
+Running the validation dataset with the above trained model yielded about 97.7% accuracy @ the 10th Epoch.
 ```python
 EPOCH 10 ...
 Validation Accuracy = 0.977
