@@ -72,15 +72,23 @@ The following images are tested with the model.
 <p align="center">
    * Speed Limit 20 Km/h
     <img src="./Test_images/20.png" alt="Image" width="50" height="50" />
+</p>
+<p align="center">
    *  Ahead Only
     <img src="./Test_images/aheadonly.png" alt="Image" width="50" height="50" />
+</p>
+<p align="center">
    *  Bumpy road
     <img src="./Test_images/bumpy.png" alt="Image" width="50" height="50" />
+</p>
+<p align="center">
    *  Roadwork 
     <img src="./Test_images/roadwork.png" alt="Image" width="50" height="50" />
+</p>
+<p align="center">
    * Traffic signals 
     <img src="./Test_images/signals.png" alt="Image" width="50" height="50" />
-    
-</p>
+</p>   
+
 
 
