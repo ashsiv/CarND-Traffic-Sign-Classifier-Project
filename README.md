@@ -7,7 +7,7 @@ In this project, I have used a modified LeNet convolutional neural network to cl
 Project Goals
 ---
 * Dataset summary and visualization.
-* Design, train and test a Lenet model architecture.
+* Design, train and test a LeNet Architecture.
 * Use the model to make predictions on new images & analyze the softmax probabilities of the new images.
 
 
