@@ -86,7 +86,7 @@ The following images are tested with the model. The difficulty in classifying ea
     <img src="./Test_images/20.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
-    Ahead Only <b> - Rectangular boundary - not included in training set</b>
+    Ahead Only <b> - Rectangular boundary - not included in training set. Image shifted to right.</b>
     <p align="center">
     <img src="./Test_images/stopsnow.PNG" alt="Image" width="50" height="50" /></p>
 </p>
@@ -101,7 +101,7 @@ The following images are tested with the model. The difficulty in classifying ea
     <img src="./Test_images/bumpy.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
-    Roadwork  <b> - Blurred image/low-light</b>
+    Roadwork  <b> - Blurred image</b>
     <p align="center">
     <img src="./Test_images/roadwork.png" alt="Image" width="50" height="50" /></p>
 </p>
