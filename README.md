@@ -78,7 +78,7 @@ Test Accuracy = 0.886
 
 #### Testing the model with new images.
 
-The following images are tested with the model.
+The following images are tested with the model. The difficulty in classifying each image is discussed in bold against each image.
 
 <p align="center">
     Speed Limit 20 Km/h <b> Overwritten text</b>
@@ -86,7 +86,7 @@ The following images are tested with the model.
     <img src="./Test_images/20.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
-    Ahead Only <b> Rectangular boundary - different than training set</b>
+    Ahead Only <b> Rectangular boundary - not included in training set</b>
     <p align="center">
     <img src="./Test_images/stopsnow.png" alt="Image" width="50" height="50" /></p>
 </p>
@@ -115,7 +115,12 @@ The following images are tested with the model.
 ```python
 Overall Test accuracy = 100%
 ```
-In the following tables, we can observe test accuracy for the correctly identified class along with the other top 4 predictions.
+In the following figures, we can observe the top 5 predictions with their softmax probability scores. All 6 images have been classified correctly.
+
+Though classified correctly, 
+* low score observed for Stop sign input as the image is occluded by snow.
+* low score observed for Speed limit (20 Km/h) due to overwritten text across the image.
+* high score is observed for Ahead only sign even if the image is shifted to right and has a rectangular boundary (training image had a   circular boundary)
 
 <p align="center">
     Speed Limit 20 Km/h
