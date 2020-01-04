@@ -130,7 +130,7 @@ Though classified correctly,
 <p align="center">
     Stop
     <p align="center">
-    <img src="./Test_images/stopsnow_accuracy.PNG" alt="Image" /></p>
+    <img src="./Test_images/snowstop_accuracy.PNG" alt="Image" /></p>
 </p>
 <p align="center">
     Ahead Only
