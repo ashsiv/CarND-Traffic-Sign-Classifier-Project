@@ -81,32 +81,32 @@ Test Accuracy = 0.886
 The following images are tested with the model. The difficulty in classifying each image is discussed in bold against each image.
 
 <p align="center">
-    Speed Limit 20 Km/h <b> Overwritten text</b>
+    Speed Limit 20 Km/h <b> - Overwritten text</b>
     <p align="center">
     <img src="./Test_images/20.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
-    Ahead Only <b> Rectangular boundary - not included in training set</b>
+    Ahead Only <b> - Rectangular boundary - not included in training set</b>
     <p align="center">
-    <img src="./Test_images/stopsnow.png" alt="Image" width="50" height="50" /></p>
+    <img src="./Test_images/stopsnow.PNG" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
-    Stop <b> Occluded by snow</b>
+    Stop <b> - Occluded by snow</b>
     <p align="center">
-    <img src="./Test_images/aheadonlyboundshift.png" alt="Image" width="50" height="50" /></p>
+    <img src="./Test_images/aheadonlyboundshift.PNG" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
-    Bumpy road <b> Easy.Background object: Post</b>
+    Bumpy road <b> - Easy. Background object: Post</b>
     <p align="center">
     <img src="./Test_images/bumpy.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
-    Roadwork  <b> Blurred image/low-light</b>
+    Roadwork  <b> - Blurred image/low-light</b>
     <p align="center">
     <img src="./Test_images/roadwork.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center"> 
-    Traffic signals <b> Easy</b>
+    Traffic signals <b> - Easy</b>
     <p align="center">
     <img src="./Test_images/signals.png" alt="Image" width="50" height="50" /></p>
 </p>   
