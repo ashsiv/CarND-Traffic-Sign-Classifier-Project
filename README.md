@@ -86,12 +86,12 @@ The following images are tested with the model. The difficulty in classifying ea
     <img src="./Test_images/20.png" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
-    Ahead Only <b> - Rectangular boundary - not included in training set. Image shifted to right.</b>
+    Stop <b> - Occluded by snow</b>
     <p align="center">
     <img src="./Test_images/stopsnow.PNG" alt="Image" width="50" height="50" /></p>
 </p>
 <p align="center">
-    Stop <b> - Occluded by snow</b>
+    Ahead Only <b> - Rectangular boundary - not included in training set. Image shifted to right.</b>
     <p align="center">
     <img src="./Test_images/aheadonlyboundshift.PNG" alt="Image" width="50" height="50" /></p>
 </p>
